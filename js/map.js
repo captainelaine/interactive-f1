@@ -18,7 +18,7 @@ function drawmapchart(map1,map2,map3) {
   var path = d3.geo.path()
     .projection(projection);
 
-    var maptooltip = d3.select("#mapchart").append("div").attr("class", "maptooltip");
+  var maptooltip = d3.select("body").append("div").attr("class", "maptooltip");
 
   var colorScale = d3.scale.ordinal().range(["red","rgb(22,199,252)"]);
   var data = [];
@@ -77,7 +77,7 @@ function drawmapchart(map1,map2,map3) {
   function getText(d) {
     var dataVal = getData(d);
     if (dataVal) {
-        return "Country:" + dataVal.country + "   "+"Winner: " + dataVal.Winner + "   " + "Team: " + dataVal.Team + "   " + "Seaon: " + dataVal.Year;
+        return "Country:" + dataVal.country + "</br> "+"Winner: " + dataVal.Winner + "</br>" + "Team: " + dataVal.Team + "</br>" + "Seaon: " + dataVal.Year;
     } else {
         return d.properties.name + ": No Race This Year.";
     }
@@ -138,23 +138,23 @@ function drawmapchart(map1,map2,map3) {
             return getColor(d); // the filtervalue is a global in the func.
         });
     //fix tooltips
-    d3.selectAll("path.countries title")
-      .text(function (d){
-            return getText(d);
-        });
+    // d3.selectAll("path.countries title")
+    //   .text(function (d){
+    //         return getText(d);
+    //     });
   }
 
   function mapmouseover(d){
   console.log(d);
   console.log(map1);
 
-  var tipdata = map1.filter(function(data){
-    if(data.ISO == d.id && data.Year == filterValue){
-      return true;
-    }
-  });
-
-  console.log(tipdata);
+  // var tipdata = map1.filter(function(data){
+  //   if(data.ISO == d.id && data.Year == filterValue){
+  //     return true;
+  //   }
+  // });
+  //
+  // console.log(tipdata);
 
 
   d3.select(this)
@@ -164,17 +164,23 @@ function drawmapchart(map1,map2,map3) {
 
   d3.select(this).moveToFront();
 
-  maptooltip
-    .style("display", null) // this removes the display none setting from it
-    .html("<p>Country: " + d.properties.name + "</br>" + "Winner: " + tipdata[0].Winner + "Team: " + tipdata[0].Team + "</p>");
-
-
+//   if(tipdata[0].Winner) {
+//     maptooltip
+//     .style("display", null) // this removes the display none setting from it
+//     .html("<p>Country: " + d.properties.name + "</br>" + "Winner: " + tipdata[0].Winner + "</br>" + "Team: " + tipdata[0].Team + "</br>" + "Season: " + tipdata[0].Year +"</p>");
+// } else {
+//   maptooltip
+//     .style("display", null)
+//     .html("<p>Country: " + d.properties.name + "</br>" + "No Race this year" + "</p>");
+// }
+ maptooltip
+ .style("display", null)
+ .html("<p>" + getText(d) + "</p>");
 }
-
   function mapmousemove(d) {
    maptooltip
-     .style("top", (d3.event.pageY - 10) + "px" )
-     .style("left", (d3.event.pageX + 10) + "px");
+     .style("top", (d3.event.pageY + 10) + "px" )
+     .style("left", (d3.event.pageX - 150) + "px");
    }
 
 
