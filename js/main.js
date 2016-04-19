@@ -25,9 +25,6 @@
 //global variable
 var dateFormat = d3.time.format("%Y");
 
-d3.csv("data/drivertotal.csv", function(d){
-  console.log(d);
-});
 
 //load the data here.
 queue()
