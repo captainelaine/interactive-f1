@@ -20,7 +20,7 @@ h1 {
   background-repeat: no-repeat;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center center;
 
 }
@@ -46,7 +46,7 @@ h1 {
   background-repeat: no-repeat;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center center;
 
 
@@ -86,7 +86,7 @@ font-family: 'Josefin Slab', sans-serif;
   background-repeat: no-repeat;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center center;
 
 

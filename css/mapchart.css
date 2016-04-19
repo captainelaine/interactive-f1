@@ -1,32 +1,65 @@
+
 #mapchart {
   float: right;
-  margin-right: 30px;
-  margin-top: 20px;
+  margin-right: 50px;
+  margin-top:170px;
   font-family: 'Josefin Slab', sans-serif;
 }
 #mapslider {
   float: right;
   margin-right: 50px;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 
 #page4 {
   background-image: url("../image/concrete-wall.png");
+
 }
 #page4 h2 {
   font-family: 'Bangers', sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   float:left;
   margin-left: 30px;
-  margin-top: 15px;
+  margin-top:15px;
+}
+
+#yearh2 {
+  font-family: 'Bangers', sans-serif;
+  font-size: 25px;
 }
 #page4 p {
-  float:right;
+  margin-left: 550px;
   text-align: center;
-  margin-right: 40px;
   width: 800px;
   font-size: 16px;
-  margin-top:25px;
+  margin-top:-220px;
+}
+
+#multiall {
+  width:520px;
+  height:500px;
+  margin-top: 10.5%;
+  margin-left: -410px;
+  float: left;
+  background-color:rgb(230,229,230);
+  opacity: 0.8;
+}
+
+
+#multiexplain h3 {
+  font-family: 'Josefin Slab', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#multiexplain p {
+  width: 480px;
+  font-size: 13px;
+  text-align:justify;
+  margin-left: 5px;
+  margin-top: -15px;
+
 }
 
 .countries {
