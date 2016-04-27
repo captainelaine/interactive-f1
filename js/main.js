@@ -39,14 +39,16 @@ queue()
     .defer(d3.csv, "data/World_Development_Indicators_Metadata_Countries.csv", makeLookup)
     .defer(d3.json, "data/countries.json")
     .defer(d3.csv, "data/ISOmulti.csv", typeFix)
+    .defer(d3.csv, "data/teamtotal.csv")
     .await(loadedData);
 
-function loadedData(error,linechart,barchart,map1,map2,map3,mapline) {
+function loadedData(error,linechart,barchart,map1,map2,map3,mapline,endlinechart) {
 
   console.log(error);
   drawlinechart1(linechart);
   drawbarchart1(barchart);
   drawmapchart(map1,map2,map3,mapline);
+  drawendlinechart(endlinechart);
 
 
 }

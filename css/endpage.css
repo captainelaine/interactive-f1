@@ -7,3 +7,56 @@
   background-attachment: fixed;
   background-position: center center;
 }
+
+#linechart2 {
+  margin-left: 330px;
+  margin-top: 0px;
+}
+
+.endlinenamelabel {
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.endlinenamelabel.focused {
+  opacity：1;
+  width: 5px;
+}
+
+#page5 h2 {
+  font-family: 'Bangers', sans-serif;
+  z-index: 1000;
+  margin-top: -350px;
+  margin-left: 450px;
+  width: 350px;
+  line-height: 40px;
+}
+
+#back {
+  margin-top: 100px;
+  font-family: 'Josefin Slab', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+
+}
+
+#page5 p {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  margin-top: 300px;
+  margin-left: 390px;
+  width: 650px;
+  text-align: center;
+  /*font-style: italic;*/
+}
+
+#page5 h3 {
+  font-family: 'Kaushan Script', sans-serif;
+  text-align: center;
+  margin-left: -10px;
+  font-size: 28px;
+  color: red;
+
+
+}

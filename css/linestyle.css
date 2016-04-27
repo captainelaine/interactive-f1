@@ -230,7 +230,7 @@ linechart1 {
 
 .linenamelabel.focused {
   opacity：1;
-  width: 3px;
+  width: 5px;
 }
 
 text.hidden {
