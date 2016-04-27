@@ -40,9 +40,9 @@ function drawendlinechart(data) {
         return lineyScale(+d.point);
       });
 
-  var linecharttooltip1 = d3.select("#linechart2")
+  var linecharttooltip2 = d3.select("body")
       .append("div")
-      .attr("class","linecharttooltip1");
+      .attr("class","linecharttooltip2");
 
       console.log(data);
       var years = ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"];
@@ -202,7 +202,7 @@ function drawendlinechart(data) {
 
       function mouseoutline(d){
         d3.selectAll("path.line").classed("unfocused",false).classed("focused",false);
-        linecharttooltip1.style("display","none");
+        linecharttooltip2.style("display","none");
         d3.selectAll("text.endlinenamelabel").classed("focused",false).classed("hidden",true);
     }
 
@@ -220,15 +220,15 @@ function drawendlinechart(data) {
         })
         .attr("r",6);
 
-        linecharttooltip1
+        linecharttooltip2
         .style("display",null)
         .html("<p>Team:" + d.team + "</br>Season:" + d.year + "</br>Points:" + d.point + "</p>");
       }
 
       function mousemovecircle(d){
-        linecharttooltip1
-        .style("top", (d3.event.pageY + 5) + "px" )
-        .style("left", (d3.event.pageX - 200) + "px");
+        linecharttooltip2
+        .style("top", (d3.event.pageY - 5) + "px" )
+        .style("left", (d3.event.pageX - 10) + "px");
       }
 
       function mouseoutcircle(d){
@@ -237,7 +237,7 @@ function drawendlinechart(data) {
         .style("opacity",0)
         .attr("r",3);
 
-        linecharttooltip1
+        linecharttooltip2
         .style("display","none");
         }
 }

@@ -40,7 +40,7 @@ function drawlinechart1(data) {
         return lineyScale(+d.point);
       });
 
-  var linecharttooltip1 = d3.select("#mslinechart1")
+  var linecharttooltip1 = d3.select("body")
       .append("div")
       .attr("class","linecharttooltip1");
 
@@ -95,8 +95,7 @@ function drawlinechart1(data) {
        .append("g")
        .attr("class","lines")
        .on("mouseover", mouseoverline)
-       .on("mouseout", mouseoutline)
-       ;
+       .on("mouseout", mouseoutline);
 
     drawline.selectAll("path")
        .data(function(d){
@@ -114,9 +113,6 @@ function drawlinechart1(data) {
            return "gray";
          }
        });
-
-
-
     var linecircles = drawline.selectAll("circle")
         .data(function(d){
           return d.performance;
@@ -156,10 +152,10 @@ function drawlinechart1(data) {
       .classed("linenamelabel",true);
 
      d3.selectAll(".linenamelabel")
-     .classed("hidden", function(d,i){
-       if (i === 0 || i === 25) {
+      .classed("hidden", function(d){
+       if (d.name === "Michael Schumacher" || d.name === "Fernando Alonso") {
          return false;
-       }else {
+       } else {
          return true;
        }
      });
@@ -206,13 +202,7 @@ function drawlinechart1(data) {
       function mouseoutline(d){
         d3.selectAll("path.line").classed("unfocused",false).classed("focused",false);
         linecharttooltip1.style("display","none");
-        d3.selectAll(".linenamelabel").classed("focused",false).classed("hidden",function(d,i) {
-          if (i=== 0 || i === 25) {
-            return false;
-          } else {
-            return true;
-      }
-    });
+        d3.selectAll("text.linenamelabel").classed("focused",false).classed("hidden",true);
     }
 
       function mouseovercircle(d){
@@ -237,7 +227,7 @@ function drawlinechart1(data) {
       function mousemovecircle(d){
         linecharttooltip1
         .style("top", (d3.event.pageY + 5) + "px" )
-        .style("left", (d3.event.pageX - 240) + "px");
+        .style("left", (d3.event.pageX - 200) + "px");
       }
 
       function mouseoutcircle(d){

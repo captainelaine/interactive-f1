@@ -29,6 +29,7 @@
 
 //global variable
 var dateFormat = d3.time.format("%Y");
+var linecharttooltip2 = d3.select("body").append("div").attr("class", "linecharttooltip2");
 
 
 //load the data here.
@@ -49,8 +50,6 @@ function loadedData(error,linechart,barchart,map1,map2,map3,mapline,endlinechart
   drawbarchart1(barchart);
   drawmapchart(map1,map2,map3,mapline);
   drawendlinechart(endlinechart);
-
-
 }
 
 function typestyle(d) {

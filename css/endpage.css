@@ -13,6 +13,22 @@
   margin-top: 0px;
 }
 
+.linecharttooltip2 {
+  position: absolute;
+  width: 130px;
+}
+
+.linecharttooltip2 p {
+  font-size: 14px;
+  background-color: white;
+  opacity:0.8;
+  border: white;
+  line-height: 30px;
+  font-style: italic;
+  text-align: center;
+
+}
+
 .endlinenamelabel {
   font-size: 15px;
   font-style: italic;

@@ -225,7 +225,7 @@ linechart1 {
 .linenamelabel {
   font-size: 15px;
   font-style: italic;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .linenamelabel.focused {
