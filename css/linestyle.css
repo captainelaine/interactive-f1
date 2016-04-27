@@ -1,16 +1,52 @@
 #main{
   font-family:  'Josefin Slab', sans-serif;
 }
+#homepage {
+  background-image: url("../image/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+#homepage p{
+  background-color: lightgray;
+  opacity: 0.8;
+  height: 900px;
+  width: 250px;
+  line-height: 80px;
+  margin-top: 0px;
+  margin-left: 150px;
+  color: black;
+  font-family: 'Kaushan Script', sans-serif;
+  font-size:40px;
+  text-align: center;
+  padding-top: 130px;
+
+}
+#logo1{
+  width: 240px;
+  height: 70px;
+}
+
+#logo2 {
+  height: 240px;
+  width: 200px;
+}
+
+
 h1 {
   margin-top:70px;
   margin-left: 250px;
-  font-family: 'Bangers', sans-serif;;
+  font-family: 'Bangers', sans-serif;
   font-size: 35px;
 }
 
 #ms1 h2 {
   margin-left: 180px;
-  font-family: 'Bangers', sans-serif;;
+  font-family: 'Bangers', sans-serif;
   font-size:30px;
 }
 #ms1 {

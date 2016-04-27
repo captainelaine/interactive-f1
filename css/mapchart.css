@@ -1,9 +1,10 @@
 
 #mapchart {
   float: right;
-  margin-right: 50px;
-  margin-top:170px;
+  /*margin-right: 50px;
+  margin-top:170px;*/
   font-family: 'Josefin Slab', sans-serif;
+  width: 700px;
 }
 #mapslider {
   float: right;
@@ -28,11 +29,10 @@
   font-size: 25px;
 }
 #page4 p {
-  margin-left: 550px;
   text-align: center;
   width: 800px;
   font-size: 16px;
-  margin-top:-220px;
+
 }
 
 #multiall {
@@ -45,7 +45,6 @@
   opacity: 0.8;
 }
 
-
 #multiexplain h3 {
   font-family: 'Josefin Slab', sans-serif;
   font-size: 20px;
@@ -54,12 +53,12 @@
 }
 
 #multiexplain p {
-  width: 480px;
+  max-width: 500px;
   font-size: 13px;
   text-align:justify;
   margin-left: 5px;
   margin-top: -15px;
-
+  max-height: 80px;
 }
 
 .countries {
@@ -144,4 +143,22 @@
     margin: 5px;
     font-family: 'Josefin Slab', sans-serif;
 
+}
+
+#mapchart svg{
+  float: right;
+  margin-top:0px;
+  margin-right: 40px;
+}
+
+#mapchart p {
+  float: right;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+#mapchart div {
+  margin-top: 100px;
+  margin-left: 80px;
+  margin-right: 40px;
 }

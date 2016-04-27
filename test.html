@@ -1,0 +1,470 @@
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:300italic,500|Josefin+Sans:400italic' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- CSS style for table filters based on Nathan Yau's in his tutorial for How American's Spend Their Days -->
+
+
+<style>
+
+body{
+  font-size:16px;
+  font-family: 'Ubuntu',sans-serif;
+  width: 1000px;
+  margin-left: 200px;
+}
+
+a{
+  color:#821122;
+}
+
+#header{
+  border-bottom:1px solid #ccc;
+  margin:20px 26px 20px 20px;
+  text-align:center;
+}
+#header h1{
+  font-size:20px;
+  font-family: 'Ubuntu',sans-serif;
+  font-weight:normal;
+}
+#header p{
+  font-family: 'Ubuntu',sans-serif;
+  font-size:14px;
+  line-height:1.4em;
+}
+
+#explain {
+  margin: 0 0 0 20px;
+}
+
+#explain h3{
+
+  font-size:17px;
+  margin:0 0 0.5em 0;
+  padding:0;
+}
+
+#explain p{
+
+  width: 700px;
+  font-size:14px;
+  line-height:1.4em;
+  color:#717171;
+  margin-top:0;
+  text-align: left;
+}
+
+#filters{
+  margin:0 24px 10px 16px;
+  float:right;
+}
+
+.area{
+  fill:#e2e2e2;
+  stroke: #888;
+  stroke-width: 0.5px;
+
+}
+
+.line {
+  fill:none;
+  stroke:steelblue;
+  stroke-width:1.5px;
+}
+
+.endpoint {
+  fill: steelblue;
+  font-size: 10px;
+}
+
+#filters table{
+  border-collapse:collapse;
+  border-top:1px solid #ccc;
+
+}
+
+#filters table td{
+  padding:0;margin:0;
+
+}
+
+#filters a{
+  display:block;
+  align-items: baseline;
+  padding:2px 4px;
+  font-size:14px;
+  color:#919292;
+  background:#F0F4F5;
+  cursor:pointer;
+  border-left:1px solid #CCCCCC;
+  border-bottom:1px solid #CCCCCC;
+  border-right:1px solid #CCCCCC;
+  overflow:hidden;
+}
+
+#filters a:hover{
+  text-decoration:underline;
+}
+#filters a.current{
+  background:#fff;color:#000;
+  font-weight:bold;
+}
+#filters a.current:hover{
+  text-decoration:none;
+}
+
+.left{
+  display:inline-block;
+
+}
+
+.clr{
+  clear:both;
+}
+
+.label {
+  fill: black;
+  font-size: 12px;
+}
+
+
+.y.axis text, .axislabel {
+  font-size: 10px;
+  fill: #888;
+}
+
+</style>
+
+<body>
+
+<div id="header">
+  <h2>F1 drivers' performances in every grand prixes during 2011 - 2015 seasons </h2>
+
+  <p><a href = "http://www.f1fanatic.co.uk/">Source: F1Fanatic (The Inoepenoent F1 Blog)</a></p>
+
+</div>
+
+<div id="explain" class="left">
+<h3>Australian</h3>
+<p>The Australian Grand Prix Corporation coined the phrase 'a great place for the race' and Melbourne is just that. Australia's second largest city is one of the most vibrant and cosmopolitan on earth, with plenty to do both day and night. The climate in late summer is perfect, the people are friendly and, to top it all, the Grand Prix is one of the most well organised of the year.</p>
+
+</div>
+
+<div id="filters">
+  <table class="left">
+    <tr>
+      <td><a id="Australia" class="current">Australia</a></td>
+    </tr>
+    <tr>
+      <td><a id="Malaysia">Malaysia</a></td>
+    </tr>
+    <tr>
+      <td><a id="China">Chinese</a></td>
+    </tr>
+    <tr>
+      <td><a id="Spain">Spanish</a></td>
+    </tr>
+    <tr>
+      <td><a id="Monaco">Monaco</a></td>
+    </tr>
+    <tr>
+      <td><a id="Canada">Canadian</a></td>
+    </tr>
+    <tr>
+      <td><a id="United_Kingdom">United Kingdom</a></td>
+    </tr>
+  </table>
+
+  <table class="left">
+
+
+    <tr>
+      <td><a id="Hungary">Hungary</a></td>
+    </tr>
+    <tr>
+      <td><a  id="Belgium">Belgium</a></td>
+    </tr>
+    <tr>
+      <td><a  id="Italy">Italy</a></td>
+    </tr>
+    <tr>
+      <td><a id="Singapo">Singapo</a></td>
+    </tr>
+    <tr>
+      <td><a id="Japan">Japan</a></td>
+    </tr>
+    <tr>
+      <td><a id="Brazil">Brazil</a></td>
+    </tr>
+    <tr>
+      <td><a id="United_Arab_Emirates">United Arab Emirates</a></td>
+    </tr>
+    <tr>
+      <td><a id="Bahrain">Bahrain</a></td>
+    </tr>
+    <tr>
+      <td><a id="United_States">United States</a></td>
+    </tr>
+    <tr>
+      <td><a id="France">France</a></td>
+    </tr>
+    <tr>
+      <td><a id="Germany">Germany</a></td>
+    </tr>
+    <tr>
+      <td><a id="Turkey">Turkey</a></td>
+    </tr>
+    <tr>
+      <td><a id="San_Marino">San Marino</a></td>
+    </tr>
+    <tr>
+      <td><a id="Austria">Austria</a></td>
+    </tr>
+    <tr>
+      <td><a id="Korea">Korea</a></td>
+    </tr>
+    <tr>
+      <td><a id="India">India</a></td>
+    </tr>
+    <tr>
+      <td><a id="Russia">Russia</a></td>
+    </tr>
+    <tr>
+      <td><a id="Mexico">Mexico</a></td>
+    </tr>
+
+
+
+  </table>
+
+</div>
+  <div class="clr"></div>
+
+<div id="vis"></div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script>
+
+
+var teams = [];
+
+var fullwidth = 250,
+fullheight = 130;
+
+var margin = {top: 50, right: 15, bottom: 20, left: 25},
+    width = fullwidth - margin.left - margin.right,
+    height = fullheight - margin.top - margin.bottom;
+
+
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var yAxis = d3.svg.axis()
+      .orient("left")
+      .ticks(2)
+      .outerTickSize(0)
+      .innerTickSize(0)
+      //.tickFormat(d3.format("s")); // thousands
+
+var current = "Australia";  //the first one shown is Australian Grand Prix
+
+var area = d3.svg.area()
+    .x(function(d) { return x(d.Year); })
+    .y0(height)
+    .y1(function(d) { return y(d[current]); });
+
+var line = d3.svg.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d[current]); });
+
+d3.select("#explain h3").text(current);
+// d3.select("#explain p").html(explain[current]);
+
+d3.csv("data/multi.csv", typeFix, function(error, data) {
+
+  //typeFix is a function that parses the dates and sets the strings to numeric. See below!
+  console.log("data after load", data);
+
+  // Nest data by symbol.
+  teams= d3.nest()
+      .key(function(d) { return d.Team; })
+      .sortValues(function(a,b) {
+        return a.Year - b.Year;
+
+    }) // date is already parsed years
+      .entries(data);
+
+  console.log(teams);
+
+  // Compute the minimum and maximum date across symbols.
+  // We assume values are sorted by date.
+  x.domain([
+    d3.min(teams, function(s) { return s.values[0].Year; }),
+    d3.max(teams, function(s) { return s.values[s.values.length - 1].Year; })
+  ]);
+
+  y.domain([0, d3.max(teams, function(c) {
+        return d3.max(c.values, function(v) { return +v[current];}); // current illness
+      })
+  ]);
+  yAxis.scale(y);
+
+  // Add an SVG element for each country, with the desired dimensions and margin.
+  var svg = d3.select("#vis").selectAll("svg")
+      .data(teams)
+    .enter().append("svg")
+      .attr("width", fullwidth)
+      .attr("height", fullheight)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .each(multiple); // uses each to call the multiple code for each country
+
+  function multiple(teams) {
+
+    // set up each individual chart, with country as data
+
+    var localsvg = d3.select(this);  //svg is a single chart, with country data.
+
+    // Add the area path elements. Note: the y-domain is set per element.
+    localsvg.append("path")
+        .attr("class", "area")
+        .attr("d", function(d) { return area(d.values); });
+
+    // Add the line path elements. Note: the y-domain is set per element.
+    localsvg.append("path")
+        .attr("class", "line")
+        .attr("d", function(d) { return line(d.values); });
+
+    localsvg.append("text")
+      .attr("class", "axislabel")
+      .attr("x", 0)
+      .attr("y", height + margin.bottom/2)
+      .style("text-anchor", "start")
+      .text(function(d) { return d.values[0].Year; });
+
+    // Add a small label for the symbol name.
+
+    localsvg.append("text")
+      .attr("class", "label")
+      .attr("x", width/2)
+      .attr("y", -8)
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.key; });
+
+    localsvg.append("text")
+      .attr("class", "axislabel")
+      .attr("x", width)
+      .attr("y", height + margin.bottom/2)
+      .style("text-anchor", "end")
+      .text(function(d) {
+        return d.values[d.values.length - 1].Year;
+        });
+
+      // put a dot on last point
+    localsvg.append("circle")
+      .attr("class", "endpoint")
+      .attr("cx", function(d) {return x(d.values[d.values.length - 1].Year);})
+    .attr("cy", function(d) { return y(d.values[d.values.length - 1][current]);})
+      .attr("r", 2);
+
+      // label the value on the last point
+    localsvg.append("text")
+     .attr("class", "endpoint")
+      .attr("x", width)
+      .attr("y", function(d) {return y(d.values[d.values.length - 1][current]);})
+      .attr("dy", -8)
+      .style("text-anchor", "end")
+      .text(function(d) { return d.values[d.values.length - 1][current]; });
+
+    localsvg.append("g").attr("class", "y axis").call(yAxis);
+
+  } // end multiple
+
+  d3.selectAll("#filters a").on("click", function() {
+      d3.selectAll("#filters a").classed("current", false);
+      d3.select(this).classed("current", true);
+
+      var label = d3.select(this).attr("text");
+      var selection = d3.select(this).attr("id");
+      current = selection;
+
+      d3.select("#explain h3").text(current);
+      // d3.select("#explain p").html(explain[current]);
+      transition(current);
+  });
+
+  function transition(current) {
+
+    y.domain([0, d3.max(teams, function(c) {
+        return d3.max(c.values, function(v) { return +v[current];});
+      })
+    ]);
+    yAxis.scale(y);
+    console.log("in trans", y.domain());
+
+    // existing svg that created each chart - now we transition each one
+
+    svg.each(function(teams) {
+
+      var chartTrans = d3.select(this).transition();
+
+      chartTrans.select(".y.axis").call(yAxis);
+
+      chartTrans.select("path.area")
+        .attr("d", function(d) { return area(d.values); });
+      chartTrans.select("path.line")
+      .attr("d", function(d) { return line(d.values); });
+
+      chartTrans.select("circle.endpoint")
+      .attr("cy", function(d) {return y(d.values[d.values.length - 1][current]);});
+
+        // label the value on the last point
+      chartTrans.select("text.endpoint")
+        .attr("y", function(d) {return y(d.values[d.values.length - 1][current]);})
+        .text(function(d) { return d.values[d.values.length - 1][current]; });
+      }); // end each
+  }
+
+});
+
+
+// this function is applied to all the data values on load!
+
+function typeFix(d) {
+  d.Australia = +d.Australia;
+  d.Malaysia = +d.Malaysia;
+  d.China= +d.China;
+  d.Spain = +d.Spain;
+  d.Monaco = +d.Monaco;
+  d.Canada= +d.Canada;
+  d.United_Kingdom = +d.United_Kingdom;
+  d.Hungary = +d.Hungary;
+  d.Belgium = +d.Belgium;
+  d.Italy= +d.Italy;
+  d.Singapo = +d.Singapo;
+  d.Japan = +d.Japan;
+  d.Brazil = +d.Brazil;
+  d.United_Arab_Emirates = +d.United_Arab_Emirates;
+  d.Bahrain = +d.Bahrain;
+  d.United_States = +d.United_States;
+  d.France= +d.France;
+  d.Germany = +d.Germany;
+  d.Turkey = +d.Turkey;
+  d.San_Marino = +d.San_Marino;
+  d.Austria = +d.Austria;
+  d.Korea = +d.Korea;
+  d.India= +d.India;
+  d.Russia = +d.Russia;
+  d.Mexico = +d.Mexico;
+
+
+
+
+  return d;
+}
+
+</script>
