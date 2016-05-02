@@ -35,7 +35,7 @@ function drawmapchart(map1,map2,map3,mapline) {
       .playButton(true) // can also be set to loop
       .on("change", function(d) {
           filterValue = dateFormat(d3.time.year(d));
-          console.log("filterValue", filterValue);
+          //console.log("filterValue", filterValue);
           redraw();
       });
 
@@ -218,7 +218,7 @@ var explain = {
 
     "SGP": "In 2008 Singapore had the honour of hosting the first night-time event in Formula One history. </br>The inaugural Singapore Grand Prix proved a huge hit, staged on a new street circuit, with the city's famous skyline providing a truly spectacular backdrop.",
 
-    "JPN": "One of the greatest tracks used in Formula One racing today, Japan's Suzuka circuit is a massive test of car and driver ability.</br>Built by Honda as a test facility in 1962, the track was designed by Dutchman John Hugenholz, the Hermann Tilke of his day. </br>A huge theme park was also constructed at the track, including the famous big wheel which dominates the Suzuka skyline.",
+    "JPN": "One of the greatest tracks used in Formula One racing today, Japan's Suzuka circuit is a massive test of car and driver ability.Built by Honda as a test facility in 1962, the track was designed by Dutchman John Hugenholz, the Hermann Tilke of his day.",
 
     "BRA": "In 1938 a huge plot of land was bought in Sao Paulo by two local property developers who intended to build a large housing development.</br> It soon became clear, however, that one part of the land was not suitable for housing and so they decided to build a racing circuit instead.",
 
@@ -244,11 +244,14 @@ var explain = {
 
     "RUS": "The Sochi circuit, located in the Black Sea resort of the same name, is the first purpose-built Formula One facility in Russia and hosted the country's inaugural Grand Prix in October 2014, in the same year that the city also stages the Winter Olympics. ",
 
-    "MEX": "As the name suggests, the history of Mexico's Autodromo Hermanos Rodriguez is interwoven with that of brothers Ricardo and Pedro Rodriguez. It was the former's emergence in 1961, driving for Ferrari aged just 19, that provided the spark, prompting the decision to build a 5-kilometre circuit in the public Magdalena Mixhuca park in the east of Mexico City.",
+    "MEX": "The history of Autodromo Hermanos Rodriguez is interwoven with that of brothers Ricardo and Pedro Rodriguez. It was the former's emergence in 1961,prompting the decision to build a 5-kilometre circuit in the public Magdalena Mixhuca park.",
 
     "No Race": "Formula One has not developed this country for race."
 };
   var current = "BRA";  //the first one shown is Australian Grand Prix
+
+  var countrylist = d3.keys(explain);
+  countrylist = countrylist.slice(0, countrylist.length-1);
 
   var area = d3.svg.area()
       .x(function(mapline) { return x(mapline.Year); })
@@ -289,6 +292,7 @@ var explain = {
       .attr("transform", "translate(" + multimargin.left + "," + multimargin.top + ")")
       .each(multiple);
 
+    d3.select("div#nodata").style("display", "none");
 
   function multiple(teams) {
 
@@ -364,43 +368,47 @@ var explain = {
      d3.select("#multiexplain p").html(explain[current]);
      d3.select("#multiexplain h3").text(title);
 
-
-
      console.log(title);
   });
 
   function transition(current) {
 
-    y.domain([0, d3.max(teams, function(c) {
-        return d3.max(c.values, function(v) { return +v[current];});
-      })
-    ]);
-    yAxis.scale(y);
-    console.log("in trans", y.domain());
+    if (countrylist.indexOf(current) == -1) {
+      console.log("show it", current);
+      d3.select("div#nodata").style("display", null);
+    } else { // is data, update charts...
+      d3.select("div#nodata").style("display", "none");
 
-    // existing svg that created each chart - now we transition each one
+      y.domain([0, d3.max(teams, function(c) {
+          return d3.max(c.values, function(v) { return +v[current];});
+        })
+      ]);
+      yAxis.scale(y);
+     //console.log("in trans", y.domain());
 
-    multisvg.each(function(teams) {
+      // existing svg that created each chart - now we transition each one
 
-      var chartTrans = d3.select(this).transition();
+      multisvg.each(function(teams) {
 
-      chartTrans.select(".y.axis").call(yAxis);
+        var chartTrans = d3.select(this).transition();
 
-      chartTrans.select("path.multiarea")
-        .attr("d", function(d) { return area(d.values); });
-      chartTrans.select("path.multiline")
-      .attr("d", function(d) { return line(d.values); });
+        chartTrans.select(".y.axis").call(yAxis);
 
-      chartTrans.select("circle.endpoint")
-      .attr("cy", function(d) {return y(d.values[d.values.length - 1][current]);});
+        chartTrans.select("path.multiarea")
+          .attr("d", function(d) { return area(d.values); });
+        chartTrans.select("path.multiline")
+        .attr("d", function(d) { return line(d.values); });
 
-        // label the value on the last point
-      chartTrans.select("text.endpoint")
-        .attr("y", function(d) {return y(d.values[d.values.length - 1][current]);})
-        .text(function(d) { return d.values[d.values.length - 1][current]; });
-      }); // end each
+        chartTrans.select("circle.endpoint")
+        .attr("cy", function(d) {return y(d.values[d.values.length - 1][current]);});
+
+          // label the value on the last point
+        chartTrans.select("text.endpoint")
+          .attr("y", function(d) {return y(d.values[d.values.length - 1][current]);})
+          .text(function(d) { return d.values[d.values.length - 1][current]; });
+        }); // end each
+      }
   }
-
 
 
 }
