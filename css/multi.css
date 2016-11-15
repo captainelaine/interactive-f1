@@ -1,0 +1,47 @@
+.multiarea{
+  fill:#e2e2e2;
+  stroke: #888;
+  stroke-width: 0.5px;
+
+}
+
+.multiline {
+  fill:none;
+  stroke:steelblue;
+  stroke-width:1.5px;
+}
+
+.endpoint {
+  fill: steelblue;
+  font-size: 10px;
+}
+
+
+.left{
+  display:inline-block;
+
+}
+
+.clr{
+  clear:both;
+}
+
+.multilabel {
+  fill: black;
+  font-size: 12px;
+}
+
+
+.y.axis text, .axislabel {
+  font-size: 9px;
+  fill: #888;
+}
+
+.multiaxislabel {
+  font-size: 9px;
+}
+
+#multichart {
+  margin-top: 0px;
+  float:left;
+}

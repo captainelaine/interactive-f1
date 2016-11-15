@@ -1,0 +1,115 @@
+<link href='https://fonts.googleapis.com/css?family=Bangers|Josefin+Slab' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Legend Ferrari in Formula One</title>
+    <link rel="stylesheet" type="text/css" href="css/barchart.css">
+    <link rel="stylesheet" type="text/css" href="css/linestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/mapchart.css">
+    <link rel="stylesheet" type="text/css" href="css/multi.css">
+    <link rel="stylesheet" type="text/css" href="css/endpage.css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div id="main">
+    <div id="homepage">
+      <p><img id="logo1" src="image/logo1.png" alt="ferrarilogo1"></br>21 Century </br> Formula One</br><img id="logo2" src="image/logo2.png" alt="ferrarilogo2" ></p>
+    </div>
+    <div id="ms1">
+      <div id= "introms1">
+        <h1>2000 - 2006</h1>
+        <h2>"Michael Schumacher Years"</h2>
+        <p>The Year 2000 was special for the Formula One team - Ferrari and all its fans around the world. After twenty years' failure of winning the Driver Championship, Ferrari finally gained this honor again in the Season 2000.</p>
+        <p>The hero was Michael Schumacher, who joined Ferrari from season 1996 and started his five-year championships from Season 2000.</p>
+      </div>
+    </div>
+
+    <div id="ms2">
+      <div id="introms2">
+        <h2>Michael Schumacher and Team Ferrari's performance from season 2000 - 2006</h2>
+        <div id= "mslinechart1" class="driverchart"></div>
+
+        <p id="introms21" class = "ms21">Season 2000 to season 2004 are "winner years" to both Michael Schumacher and Team Ferrari. They undertook both the championships of driver and team in these years, which made Michael Schumacher the "King of F1".</p>
+        <p class = "ms21">However, due to new rules of the use of F1 tyres and the backward of the race car's research and development, Ferrari failed to challenge team Renault in both season 2005 and 2006, after that Fernando Alonso became world champion instead of Michael Schumacher. After season 2006, Michael Schumacher chose to retire from F1.</p>
+      </div>
+
+    </div>
+
+    <div id = "ms3">
+      <div id="introms3">
+      <h2>Michael Schumacher's Record</h2>
+
+      <div id="ms3p">
+        <p>There is no doubt that Michael Schumacher was one of the greatest Formula One drivers in the world. Although he has retired for several years, he still maintains multiple records in the field of Formula One, which are hard to be surpassed by other F1 drivers.</p>
+      </div>
+      <div id="barmenu">
+          <select>
+          <option value ="pole">Pole</option>
+          <option value="inPoint">InPoint Race</option>
+          <option value="FastLap">Fastest Lap</option>
+          <option value="WinfromPole">Win From pole</option>
+
+          </select>
+      </div>
+      <div id="msbarchart"></div>
+    </div>
+    </div>
+
+    <div id="page4">
+      <h2>After</br>Michael Schumacher Era. . . .</br><span id="yearh2">(2007-2015)</span></h2>
+     <div id="multiall">
+       <div id="multiexplain">
+        <h3>Australia</h3>
+        <p>The Australian Grand Prix Corporation coined the phrase 'a great place for the race' and Melbourne is just that. The climate in late summer is perfect, the people are friendly and, to top it all, the Grand Prix is one of the most well organised of the year.</p>
+      </div>
+
+
+       <div id="multichart">
+     </div>
+     <div id="nodata">
+       <p id="norace">No race data for this country.</p>
+     </div>
+     </div>
+      <div id="mapchart">
+        <p>This map shows the performance of Team Ferrari from seaon 2000 to season 2015.</br>After Michael Schumacher retired from Ferrari in season 2006, Ferrari won another world championship with their new driver: Kimi Raikkonen.</br>However,Ferrari failed to come up with a competitive race car after season 2007 and thus had fewer victories than when Schumaher was their driver. Teams like Red Bull, Mercedes and Brawn GP passed them by.
+        </br>The map shows the decreasing dominance of Ferrari after Season 2007.</p>
+      </div>
+      <div id="mapslider"></div>
+
+    </div>
+
+    <div id="page5">
+
+
+      <h2>Ferrari has waken </br><span id="back">After several seasons' downturn, Ferrari went back to the second place of team championship last year. Drivers of Ferrari also had outstanding performances in the beginning of 2016 new season.</span></h2>
+      <div id= "linechart2" class = "teamchart"></div>
+      <p>For many, Ferrari and Formula One racing have become inseparable. The only team to have competed in every season in F1 history, the Prancing Horse has grown from the humble dream of founder Enzo Ferrari to become one of the most iconic and recognised brands in the world. </p>
+      <h3>The Red Flash won't disappear in the Paddock of Formula One</h3>
+    </div>
+    <div id="page6">
+      <p>Resources:</p>
+      <p><a href="https://en.wikipedia.org/wiki/Formula_One">Wikipedia - Formula One</a>
+      <a href="http://www.f1fanatic.co.uk/statistics/">Formula One - Statistics</a></p>
+      <p>Page coded by <a href="http://captainelainefz.wixsite.com/zhoufang">Zhou Fang </a></p>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script src="https://d3js.org/queue.v1.min.js"></script>
+  <script src="js/d3-legend.min.js"></script>
+  <script src="js/chroniton-only.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script type = "text/javascript" src = "js/linechart.js"></script>
+  <script type = "text/javascript" src = "js/barchart.js"></script>
+  <script type = "text/javascript" src ="js/map.js"></script>
+  <script type = "text/javascript" src ="js/main.js"></script>
+  <script type = "text/javascript" src ="js/endlinechart.js"></script>
+
+
+
+  </body>
+  </html>

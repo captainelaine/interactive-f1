@@ -1,0 +1,178 @@
+
+#mapchart {
+  float: right;
+  text-align: left;
+  font-family: 'Josefin Slab', sans-serif;
+  width: 56%;
+}
+#mapslider {
+  width: 50%;
+  float: right;
+  margin-right: 5%;
+  margin-top: -50px;
+}
+
+#nodata {
+  position: relative;
+  z-index: 1000;
+  background-color:rgb(230,229,230);
+  height: 400px;
+  width: 500px;
+  text-align: center;
+}
+#page4 {
+  background-image: url("../image/concrete-wall.png");
+
+}
+#page4 h2 {
+  font-family: 'Bangers', sans-serif;
+  font-size: 40px;
+  float:left;
+  margin-left: 30px;
+  margin-top:15px;
+}
+
+#yearh2 {
+  font-family: 'Bangers', sans-serif;
+  font-size: 25px;
+}
+/*#page4 p {
+  width: 800px;
+  font-size: 16px;
+}*/
+#norace p {
+  font-family: 'Bangers', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  width: 300px;
+}
+
+#multiall {
+  width:520px;
+  height:500px;
+  margin-top: 10.5%;
+  margin-left: -410px;
+  float: left;
+  background-color:rgb(230,229,230);
+
+}
+
+#multiexplain h3 {
+  font-family: 'Josefin Slab', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#multiexplain p {
+  max-width: 500px;
+  font-size: 13px;
+  text-align:justify;
+  /*margin-left: 5px;*/
+  margin-top: -15px;
+  max-height: 80px;
+}
+
+.countries {
+    stroke: #fff;
+    stroke-width:2px;
+}
+
+.legendLinear text {
+    font-size: 12px;
+    font-family: 'Josefin Slab', sans-serif;
+}
+
+.chroniton text {
+    font-size: 10px;
+    color: gray;
+    font-family: 'Josefin Slab', sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.x.axis, .slider text {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  user-select:none;
+}
+.x.axis path.domain {
+  stroke-width:10;
+  stroke-linecap:round;
+  stroke:#ddd;
+}
+.x.axis path.halo {
+  stroke-width:12;
+  stroke-linecap:round;
+  stroke:#ccc;
+}
+.tick line {
+  stroke:#d0d0d0;
+  stroke-width:1;
+  transform:translate(0px, -5px);
+}
+.slider .handle {
+  fill: #fff;
+  stroke-width:1;
+  stroke:#333;
+}
+.slider .handle, .slider text {
+  cursor: move;
+  cursor: -webkit-grab;
+  transition:fill 200ms ease-in-out;
+}
+.handle:active, .slider text:active {
+  cursor: move;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+.slider.brushing .handle {
+  fill: #eee;
+}
+.label {
+  font:bold 12px sans-serif;
+}
+
+.maptooltip {
+  position: absolute;
+  text-align: center;
+  min-width: 200px;
+  min-height: 30px;
+  padding: 5px;
+  font: 12px sans-serif;
+  background: white;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+  pointer-events: none;
+
+}
+
+.maptooltip p {
+    margin: 5px;
+    font-family: 'Josefin Slab', sans-serif;
+
+}
+
+#mapchart svg{
+  float: right;
+  margin-top:2%;
+  position: relative;
+  /*width: 80%;*/
+  margin-right: 5%;
+}
+
+#mapchart p {
+  float: right;
+  margin-top: 5%;
+  margin-right: 40px;
+}
+
+#mapchart div {
+  margin-top: 100px;
+  margin-left: 80px;
+  margin-right: 5%;
+}

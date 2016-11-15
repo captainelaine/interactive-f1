@@ -1,0 +1,64 @@
+.bartooltip {
+  position: absolute;
+  z-index: 10;
+}
+
+.bartooltip {
+  background-color:white;
+   border: none;
+   padding: 2px;
+   font-size: 12px;
+
+}
+#msbarchart {
+  margin-left: -15px;
+  margin-top: 10px;
+}
+
+#barmenu {
+  margin-left: 320px;
+}
+
+.barlabels {
+
+  font-size: 10px;
+  font-family: 'Josefin Slab', sans-serif;
+  font-style: italic;
+  stroke: gray;
+  stroke-width: 1px;
+}
+.barlabeldriver {
+  font-size: 9px;
+  font-family: 'Josefin Slab', sans-serif;;
+
+
+}
+
+.barxaxis {
+  shape-rendering: crispEdges;
+  font-size: 10px;
+}
+
+.barxaxis path{
+  fill: none;
+  stroke: white;
+  stroke-opacity: 0;
+}
+
+.barxaxis line {
+  stroke: gray;
+  stroke-opacity: 0.8;
+
+}
+
+.barfocused {
+  opacity: 0.9;
+
+}
+.barunfocused {
+  opacity: 0.4;
+}
+
+.hidden{
+  display: none;
+}
