@@ -9,7 +9,8 @@
   width: 50%;
   float: right;
   margin-right: 5%;
-  margin-top: -50px;
+  margin-top: -20px;
+  z-index:1000;
 }
 
 #nodata {
@@ -159,7 +160,7 @@
 
 #mapchart svg{
   float: right;
-  margin-top:2%;
+  margin-top:0.5%;
   position: relative;
   /*width: 80%;*/
   margin-right: 5%;
