@@ -4,6 +4,7 @@
   text-align: left;
   font-family: 'Josefin Slab', sans-serif;
   width: 56%;
+  margin-right: 3%;
 }
 #mapslider {
   width: 50%;
@@ -173,11 +174,13 @@
 }
 
 #mapchart svg{
+  width: 100%;
   float: right;
   margin-top:0.5%;
   position: relative;
   /*width: 80%;*/
-  margin-right: 5%;
+  margin-right: 0%;
+  margin-left: 2%;
 }
 
 #mapchart p {
