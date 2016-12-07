@@ -77,11 +77,15 @@
 
 #multiexplain p {
   max-width: 500px;
-  font-size: 13px;
+  font-size: 10px;
   text-align:justify;
   /*margin-left: 5px;*/
   margin-top: -15px;
   max-height: 80px;
+}
+
+#mapslider {
+  height: 20%;
 }
 
 .countries {
