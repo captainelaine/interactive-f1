@@ -75,17 +75,13 @@ h1 {
 }
 
 #ms2 {
-
   background-image: url("../image/ms.svg");
   background-size: cover;
-
   background-repeat: no-repeat;
   overflow-y: hidden;
   overflow-x: hidden;
   background-attachment: fixed;
   background-position: center center;
-
-
 }
 
 
@@ -98,21 +94,16 @@ h1 {
 }
 
 
-
-#introms21 {
-  padding-top: 70px;
-  margin-right: -50px;
-
+#ms211 {
+  width: 70%;
+  margin-top: 2%;
+  margin-left: 25%;
 }
 
 .ms21 {
-  font-size: 16px;
-  margin-top: 30px;
   font-size: 17px;
-  width: 328px;
-  margin-left: 300px;
   line-height: 24px;
-font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Josefin Slab', sans-serif;
 }
 
 #ms3 {
@@ -145,7 +136,9 @@ font-family: 'Josefin Slab', sans-serif;
   font-family: 'Josefin Slab', sans-serif;
 }
 #mslinechart1 {
-  float: right;
+  width: 90%;
+  float: left;
+  margin-left: 30%;
 }
 
 linechart1 {
