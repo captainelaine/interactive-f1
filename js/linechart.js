@@ -1,7 +1,7 @@
 function drawlinechart1(data) {
 
   var linefullwidth = 800;
-  var linefullheight = 500;
+  var linefullheight = 400;
   var linemargin = {top:50, right: 150, bottom: 50, left:80};
   var linewidth = linefullwidth - linemargin.left - linemargin.right;
   var lineheight = linefullheight - linemargin.top - linemargin.bottom;
@@ -127,7 +127,15 @@ function drawlinechart1(data) {
         return lineyScale(+d.point);
       })
       .attr("r",3)
-      .style("opacity", 0);
+      .style("opacity", 0.3)
+      .style("fill", function(d){
+        if (d.driver==="Michael Schumacher"){
+          return "red";
+        } if(d.driver ==="Fernando Alonso") {
+          return "rgb(30,164,224)";} else {
+          return "gray";
+        }
+      });
 
     linecircles
     .on("mouseover", mouseovercircle)
@@ -233,7 +241,7 @@ function drawlinechart1(data) {
       function mouseoutcircle(d){
         d3.select(this)
         .transition()
-        .style("opacity",0)
+        .style("opacity",0.3)
         .attr("r",3);
 
         linecharttooltip1

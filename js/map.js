@@ -196,7 +196,7 @@ function drawmapchart(map1,map2,map3,mapline) {
       };
 //Now is the variables for the multiple chart
 var explain = {
-    "AUS": "The Australian Grand Prix Corporation coined the phrase 'a great place for the race' and Melbourne is just that. The climate in late summer is perfect, the people are friendly and, to top it all, the Grand Prix is one of the most well organised of the year.",
+    "AUS": "The Australian Grand Prix Corporation coined the phrase 'a great place for the race' and Melbourne is just that. The climate in late summer is perfect, the people are friendly and, to top it all, the Grand Prix is one of the most well organised of the year. ",
 
     "MYS":"Designed by Hermann Tilke, Sepang is one of the most technical circuits in Formula One. </br>The combination of long high-speed straights, and tight twisting complexes make the track very complicated, but also perfect for overtaking as the track itself is very wide.",
 
