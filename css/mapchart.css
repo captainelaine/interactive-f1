@@ -1,18 +1,17 @@
 
 #mapchart {
-  float: right;
   text-align: left;
   font-family: 'Josefin Slab', sans-serif;
-  width: 56%;
-  height: 90%;
-  margin-right: 3%;
+  height: 67%;
+
 }
-#mapslider {
-  width: 50%;
+
+#mapchartall {
   float: right;
-  margin-right: 5%;
-  margin-top: -20px;
-  z-index:1000;
+  margin-top: 2%;
+  width: 50%;
+  margin-right: 7%;
+  margin-left: 4%;
 }
 
 #nodata {
@@ -57,7 +56,7 @@
 #multiall {
   width:37%;
   height:77%;
-  margin-top: 10.5%;
+  margin-top: 10%;
   margin-left: -410px;
   float: left;
   background-color:rgb(230,229,230);
@@ -181,27 +180,6 @@
 
 }
 
-#mapchart svg{
-  width: 100%;
-  float: right;
-  margin-top:0.5%;
-  position: relative;
-  /*width: 80%;*/
-  margin-right: 0%;
-  margin-left: 2%;
-}
-
-#mapchart p {
-  float: right;
-  margin-top: 5%;
-  margin-right: 40px;
-}
-
-#mapchart div {
-  margin-top: 100px;
-  margin-left: 80px;
-  margin-right: 5%;
-}
 
 #multichart {
   width: 100%;
