@@ -83,13 +83,13 @@
 }
 
 #multiexplain p {
-  max-width: 500px;
+  /*max-width: 500px;*/
   font-size: 11px;
   text-align:justify;
   /*margin-left: 5px;*/
   margin-top: -15px;
   max-height: 80px;
-  width: 100%;
+  width: 97%;
   height: 10%;
 }
 
