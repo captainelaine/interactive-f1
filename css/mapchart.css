@@ -1,10 +1,13 @@
 
 #mapchart {
+  margin-top: 5%;
   text-align: left;
   font-family: 'Josefin Slab', sans-serif;
-  height: 67%;
+  height: 65%;
+  width: 50%;
 
 }
+
 
 #mapchartall {
   float: right;
@@ -18,8 +21,6 @@
   position: relative;
   z-index: 1000;
   background-color:rgb(230,229,230);
-  height: 400px;
-  width: 500px;
   text-align: center;
 }
 #page4 {
@@ -43,9 +44,9 @@
   font-size: 16px;
 }*/
 #nodata {
-  margin-top: -1%;
+  margin-top: -10%;
   width: 100%;
-  height: 80%;
+  height: 82%;
 }
 #norace p {
   font-family: 'Bangers', sans-serif;
