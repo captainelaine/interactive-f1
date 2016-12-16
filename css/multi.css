@@ -44,4 +44,5 @@
 #multichart {
   margin-top: 0px;
   float:left;
+  min-width: 400px;
 }
