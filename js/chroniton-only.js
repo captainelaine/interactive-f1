@@ -28,9 +28,9 @@ var handleRadius = 6,
   ].join(',');
 
 function chroniton() {
-  var margin = {top: 10, right: 20, bottom: 20, left: 20},
+  var margin = {top: 10, right: 20, bottom: 30, left: 20},
     domain = [new Date('1/1/2000'), new Date()],
-    width = 660,
+    width = 680,
     height = 50,
 
     // configurable options

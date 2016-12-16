@@ -1,20 +1,32 @@
+#body {
+  min-width: 918px;
+}
 
 #mapchart {
-  margin-top: 5%;
+  margin-top: 2%;
   text-align: left;
   font-family: 'Josefin Slab', sans-serif;
-  height: 65%;
+  height: 60%;
   width: 50%;
 
 }
 
+#indomap {
+  margin-left: 20%;
+  float: left;
+  width: 50%;
+  max-width: 500px;
+}
+
 
 #mapchartall {
-  float: right;
-  margin-top: 2%;
+  /*clear: both;*/
+  float: left;
+  /*margin-top: -11%;*/
   width: 50%;
-  margin-right: 7%;
-  margin-left: 4%;
+  max-width: 550px;
+  margin-right: 2%;
+  margin-left: 2%;
 }
 
 #nodata {
@@ -55,10 +67,12 @@
 }
 
 #multiall {
+  clear:both;
+  min-width: 500px;
   width:37%;
   height:77%;
-  margin-top: 10%;
-  margin-left: -410px;
+  /*margin-top: 10%;*/
+  margin-left: 2%;
   float: left;
   background-color:rgb(230,229,230);
 
@@ -94,6 +108,7 @@
 }
 
 #mapslider {
+  margin-top: 10%;
   height: 20%;
 }
 
